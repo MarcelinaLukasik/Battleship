@@ -13,16 +13,15 @@ namespace Battleship
             SquareStatus = SquareStatus.Empty;
         }
 
-        public string GetCharacter()
+        public char GetCharacter()
         {
-            //TODO change strings to chars
             return SquareStatus switch
             {
-                SquareStatus.Empty => "o",
-                SquareStatus.Ship => "X",
-                SquareStatus.Hit => "H",
-                SquareStatus.Missed => "M",
-                SquareStatus.Destroyed => "D",
+                SquareStatus.Empty => 'o',
+                SquareStatus.Ship => 'X',
+                SquareStatus.Hit => 'H',
+                SquareStatus.Missed => 'M',
+                SquareStatus.Destroyed => 'D',
                 _ => "Error"
             };
         }
